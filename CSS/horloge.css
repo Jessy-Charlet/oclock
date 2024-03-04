@@ -1,5 +1,5 @@
 
-.clock {
+#horlogeCont {
     border-radius: 50%;
     background: #fff;
     border: 5px solid white;
@@ -10,35 +10,36 @@
     position: relative;
     width: 70vh;
     height: 70vh;
+    z-index: 1;
 }
 
 .minute, .heure {
     position: absolute;
-    height: 20%; width: 1%;
+    height: 28%; width: 1.5%;
     margin: auto;
-    top: -20%; left: 0;	bottom: 0; right: 0;
+    top: -28%; left: 0;	bottom: 0; right: 0;
     transform-origin: bottom center;
     transform: rotate(0deg);
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
     background: black;
+    z-index: 4;
+    border-radius: 50% 50% 0 0;
 }
 
 .minute {
     position: absolute;
-    height: 35%;
-    width: 1%;
-    top: -35%;
+    height: 43%;
+    top: -43%;
     left: 0;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
     transform: rotate(90deg);
 }
 
 .seconde {
     position: absolute;
-    height: 35%;
+    height: 43%;
     width: 0.5%;
     margin: auto;
-    top: -35%;
+    top: -43%;
     left: 0;
     bottom: 0;
     right: 0;
@@ -46,6 +47,9 @@
     background: #ff4b3e;
     transform-origin: bottom center;
     transform: rotate(180deg);
+    z-index: 4;
+    border-radius: 50% 50% 0 0;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
 }
 
 .dot {
@@ -60,4 +64,18 @@
     background: black;
     border-radius: 50%;
     margin: auto;
+    z-index: 4;
+}
+
+#horlogeNum {
+    display:block;
+    text-align: center;
+    font-size: 8vh;
+    height: 8vh;
+    width: 60%;
+    position: absolute;
+    bottom: 15vh;
+    left: 50%;
+    translate: -50%;
+    z-index: 3;
 }
