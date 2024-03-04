@@ -1,0 +1,71 @@
+*{
+    padding:0;
+    margin:0;
+}
+
+body{
+    background-color: #1b1b1b;
+    height: 100vh;
+}
+
+
+/*** Header **/
+header{
+    box-sizing: border-box;
+    width: 100vw;
+    height: 18vh;
+}
+
+
+/*** Main **/
+main{
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 82vh;
+}
+
+
+/*** Nav **/
+nav{
+    box-sizing: border-box;
+    width: 72vh;
+    height: 18vh;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+nav > span{
+    height:18vh;
+    width: 18vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav > span > img{
+    height:10vh;
+    transition: all 200ms;
+}
+
+nav > span > img:hover{
+    height:12vh;
+}
+
+.iconActive{
+    height: 12vh;
+}
+#navBarre{
+    background:black;
+    height: 5px;
+    display:block;
+    position:absolute;
+    width: 14vh;
+    left: 2vh;
+    bottom: 0;
+}
