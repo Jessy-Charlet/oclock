@@ -12,7 +12,8 @@ $(document).ready(function () {
         $("#navBarre").animate({
             'width': $(this).width(),
              'left': $(this).position().left}
-          ,'fast')
+          ,'fast');
+        $("#navBarre").css("background-color", "#00b894");
     })
     $("#chronometre").on("click", function(){
         $(".icon").removeClass("iconActive");
@@ -22,7 +23,8 @@ $(document).ready(function () {
         $("#navBarre").animate({
             'width': $(this).width(),
              'left': $(this).position().left}
-          ,'fast')
+          ,'fast');
+          $("#navBarre").css("background-color", "#0984e3");
     })
     $("#minuteur").on("click", function(){
         $(".icon").removeClass("iconActive");
@@ -32,7 +34,8 @@ $(document).ready(function () {
         $("#navBarre").animate({
             'width': $(this).width(),
              'left': $(this).position().left}
-          ,'fast')
+          ,'fast');
+          $("#navBarre").css("background-color", "#e84393");
     })
     $("#reveil").on("click", function(){
         $(".icon").removeClass("iconActive");
@@ -42,7 +45,8 @@ $(document).ready(function () {
         $("#navBarre").animate({
             'width': $(this).width(),
              'left': $(this).position().left}
-          ,'fast')
+          ,'fast');
+          $("#navBarre").css("background-color", "#e17055");
     })
 
 

@@ -1,6 +1,8 @@
 *{
     padding:0;
     margin:0;
+    font-family: "Roboto Mono", monospace;
+    font-weight: 700;
 }
 
 body{
@@ -20,7 +22,8 @@ header{
 /*** Main **/
 main{
     box-sizing: border-box;
-    display: flex;
+    display: grid;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     width: 100vw;
@@ -61,11 +64,13 @@ nav > span > img:hover{
     height: 12vh;
 }
 #navBarre{
-    background:black;
+    background-color: #00b894;
     height: 5px;
     display:block;
     position:absolute;
     width: 14vh;
     left: 2vh;
     bottom: 0;
+    transition: all 400ms;
 }
+

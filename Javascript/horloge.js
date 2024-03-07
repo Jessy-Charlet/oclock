@@ -29,7 +29,7 @@ function clock() {
     seconds = "0" + seconds;
   }
 
-  $("#horlogeNum").text(hours + " : " + minutes + " : " + seconds);
+  $("#horlogeNum").text(hours + ":" + minutes + ":" + seconds);
 }
 
 setInterval(clock, 1000);

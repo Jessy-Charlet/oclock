@@ -1,0 +1,53 @@
+
+.chronometreButton{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15vw;
+    > button {
+        height: 15vh;
+        margin-top: 10vh; 
+        background: #0984e3;
+        border: none;
+        border-radius: 50%;
+        transition: all 200ms;
+        > img {
+            width: 15vh;
+            transition: all 200ms;
+        }
+    }
+}
+
+.chronometreButton > button:hover {
+    border-radius: 40%;
+}
+
+#chronometreGeneral{
+    font-size: 20vh;
+    color: white;
+    text-align: center;
+    transition: all 200ms;
+}
+
+#chronometreSave{
+    width:fit-content;
+    padding: 0 1vw;
+    margin: 0 auto;
+    overflow-y: scroll;
+    max-height: 30vh;
+    scrollbar-color: #0984e3 #1b1b1b;
+    scrollbar-width: 50px;
+}
+
+.tours {
+    color: white;
+    font-size: 3vh;
+    width: fit-content;
+    margin: 0 auto;
+    > img {
+        height: 3vh;
+    }
+}
+.tours:nth-child(2n){
+    color: #94cffc;
+}
