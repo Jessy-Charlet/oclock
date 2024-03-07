@@ -41,18 +41,12 @@ $(document).ready(function () {
         $(".icon").removeClass("iconActive");
         $(this).addClass("iconActive");
         $("#chronometreCont, #horlogeCont, #minuteurCont").slideUp();
-        $("#revilCont").slideDown();
+        $("#reveilCont").slideDown();
         $("#navBarre").animate({
             'width': $(this).width(),
              'left': $(this).position().left}
           ,'fast');
           $("#navBarre").css("background-color", "#e17055");
     })
-
-
-
-
-
-
 
 })

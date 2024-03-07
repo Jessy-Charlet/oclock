@@ -34,6 +34,7 @@
     padding: 0 1vw;
     margin: 0 auto;
     overflow-y: scroll;
+    min-height: 29.9vh;
     max-height: 30vh;
     scrollbar-color: #0984e3 #1b1b1b;
     scrollbar-width: 50px;
@@ -44,10 +45,15 @@
     font-size: 3vh;
     width: fit-content;
     margin: 0 auto;
+    padding: 0 1vw;
     > img {
         height: 3vh;
     }
 }
 .tours:nth-child(2n){
     color: #94cffc;
+}
+.tours:hover{
+    background-color: #0984e3;
+    color: white;
 }

@@ -1,0 +1,81 @@
+#reveilCont{
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+#reveilForm{
+    border-radius: 10px;
+
+    >label {
+        display: none;
+    }
+    >input {
+        padding: 0.5em;
+        font-size: 1.5em;
+        border: none;
+        border-radius: 15px;
+        margin: 0.5em 0 0.5em 0;
+    }
+    >button {
+        font-size: 1.5em;
+        padding: 0.5em;
+        margin: 0.5em;
+        border:none;
+        border-radius: 10px;
+        background-color: #e17055;
+        transition: all 200ms;
+    }
+    >button:hover{
+        color:white;
+        padding-right: 2em;
+
+    }
+}
+
+#reveilListe{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2vw;
+    margin-top: 3vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#reveilListe {
+    list-style-type: none;
+    padding: 0;
+}
+
+.alarmItem {
+    box-shadow: 0 0 10px #53291f;
+    padding: 1em;
+    border-radius: 10px;
+    text-align: center;
+    >div{
+        color: #e17055;
+    }
+    >div:first-child{
+        color: white;
+        font-size: 1.5em;
+    }
+    >span{
+        color: #53291f;
+    }
+}
+
+.passee {
+    color: red;
+}

@@ -5,31 +5,31 @@ clock();
 
 function clock() {
   const date = new Date();
-  let hours = ((date.getHours() + 11) % 12 + 1);
-  let minutes = date.getMinutes();
-  let seconds = date.getSeconds();
-  let hour = hours * 30;
-  let minute = minutes * 6;
-  let second = seconds * 6;
+  let hoursH = ((date.getHours() + 11) % 12 + 1);
+  let minutesH = date.getMinutes();
+  let secondsH = date.getSeconds();
+  let hourH = hoursH * 30;
+  let minuteH = minutesH * 6;
+  let secondH = secondsH * 6;
 
   
-  document.querySelector('.heure').style.transform = `rotate(${hour}deg)`;
+  document.querySelector('.heure').style.transform = `rotate(${hourH}deg)`;
 
-  document.querySelector('.minute').style.transform = `rotate(${minute}deg)`;
+  document.querySelector('.minute').style.transform = `rotate(${minuteH}deg)`;
 
-  document.querySelector('.seconde').style.transform = `rotate(${second}deg)`;
+  document.querySelector('.seconde').style.transform = `rotate(${secondH}deg)`;
 
-  if (hours < 10){
-    hours = "0" + hours;
+  if (hoursH < 10){
+    hoursH = "0" + hoursH;
   }
-  if (minutes < 10){
-    minutes = "0" + minutes;
+  if (minutesH < 10){
+    minutesH = "0" + minutesH;
   }
-  if (seconds < 10){
-    seconds = "0" + seconds;
+  if (secondsH < 10){
+    secondsH = "0" + secondsH;
   }
 
-  $("#horlogeNum").text(hours + ":" + minutes + ":" + seconds);
+  $("#horlogeNum").text(hoursH + ":" + minutesH + ":" + secondsH);
 }
 
 setInterval(clock, 1000);

@@ -5,9 +5,9 @@ $(document).ready(function () {
     let startBtn = document.getElementById("chronometrePlay");
 
 
-    let secondes = 0;
-    let minutes = 0;
-    let heures = 0;
+    let secondesC = 0;
+    let minutesC = 0;
+    let heuresC = 0;
     let tours = 0;
 
     let timeout;
@@ -16,21 +16,7 @@ $(document).ready(function () {
 
     $("#chronometreTours").hide();
     $("#chronometreReset").hide();
-
-    function affichage(secondes, minutes, heures){
-        if (secondes < 10) {
-            secondes = "0" + secondes;
-        }
-
-        if (minutes < 10) {
-            minutes = "0" + minutes;
-        }
-
-        if (heures < 10) {
-            heures = "0" + heures;
-        }
-    }
-
+    $("#chronometreSave").hide();
 
 
     $("#chronometrePlay").on("click", function(){
@@ -39,10 +25,11 @@ $(document).ready(function () {
         $("#chronometreReset").show();
         chrono.textContent = "00:00:00";
         tours = 0;
-        heures = 0;
-        minutes = 0;
-        secondes = 0;
+        heuresC = 0;
+        minutesC = 0;
+        secondesC = 0;
         $("#chronometreGeneral").css("font-size", "20vh");
+        $("#chronometreSave").hide();
         $("#chronometreSave").text("");
     })
 
@@ -61,58 +48,62 @@ $(document).ready(function () {
     };
 
     const tour = () => {
+        secondesC = parseInt(secondesC);
+        minutesC = parseInt(minutesC);
+        heuresC = parseInt(heuresC);
 
-        if (secondes < 10) {
-            secondes = "0" + secondes;
+        if (secondesC < 10) {
+            secondesC = "0" + secondesC;
         }
 
-        if (minutes < 10) {
-            minutes = "0" + minutes;
+        if (minutesC < 10) {
+            minutesC = "0" + minutesC;
         }
 
-        if (heures < 10) {
-            heures = "0" + heures;
+        if (heuresC < 10) {
+            heuresC = "0" + heuresC;
         }
-        affichage(secondes, minutes, heures);
+        $("#chronometreSave").show();
         $("#chronometreGeneral").css("font-size", "10vh");
         tours++;
+        secondesmC = secondesC-1;
         $("#chronometreSave").prepend(
-            "<div class='tours'><img src='./Pictures/tours.png'> Tour " + tours + " - " +heures + ":" + minutes + ":" + secondes);
+            "<div class='tours'><img src='./Pictures/tours.png'> Tour " + tours + " - " + heuresC + ":" + minutesC + ":" + secondesmC);
     };
 
     const defilerTemps = () => {
         if (estArrete) return;
 
-        secondes = parseInt(secondes);
-        minutes = parseInt(minutes);
-        heures = parseInt(heures);
+        secondesC = parseInt(secondesC);
+        minutesC = parseInt(minutesC);
+        heuresC = parseInt(heuresC);
 
-        if (secondes == 60) {
-            minutes++
-            secondes = 0;
+        if (secondesC == 60) {
+            minutesC++
+            secondesC = 0;
         }
 
-        if (minutes == 60) {
-            heures++
-            minutes = 0;
+        if (minutesC == 60) {
+            heuresC++
+            minutesC = 0;
         }
 
         //   affichage
-        if (secondes < 10) {
-            secondes = "0" + secondes;
+        if (secondesC < 10) {
+            secondesC = "0" + secondesC;
         }
 
-        if (minutes < 10) {
-            minutes = "0" + minutes;
+        if (minutesC < 10) {
+            minutesC = "0" + minutesC;
         }
 
-        if (heures < 10) {
-            heures = "0" + heures;
+        if (heuresC < 10) {
+            heuresC = "0" + heuresC;
         }
 
-        chrono.textContent = `${heures}:${minutes}:${secondes}`;
+        chrono.textContent = `${heuresC}:${minutesC}:${secondesC}`;
 
-        secondes++;
+        secondesC++;
 
         timeout = setTimeout(defilerTemps, 1000);
     };

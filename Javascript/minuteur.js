@@ -3,8 +3,6 @@ $(document).ready(function () {
     let heures = 0;
     let minutes = 0;
     let secondes = 0;
-    let play = 0;
-    let date = new Date(0);
 
     $("#minuteurReset").hide();
     $("#minuteurPause").hide();
@@ -160,7 +158,7 @@ $(document).ready(function () {
             heures--
             minutes = 59;
         }
-
+        
         //   affichage
         if (secondes < 10) {
             secondes = "0" + secondes;
@@ -169,16 +167,15 @@ $(document).ready(function () {
         if (minutes < 10) {
             minutes = "0" + minutes;
         }
-
+        
         if (heures < 10) {
             heures = "0" + heures;
         }
-
+        
         chrono.textContent = `${heures}:${minutes}:${secondes}`;
         
-        secondes--
+        secondes-- ;
         if (heures ==0 && minutes == 0 && secondes == -1){
-            chrono.textContent = "Bip Bip BiP";
             alert("BIP BIP BIP")
             $("#minuteurReset").hide();
             $("#minuteurPause").hide();
