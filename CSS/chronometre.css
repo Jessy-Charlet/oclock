@@ -37,7 +37,6 @@
     min-height: 29.9vh;
     max-height: 30vh;
     scrollbar-color: #0984e3 #1b1b1b;
-    scrollbar-width: 50px;
 }
 
 .tours {
@@ -56,4 +55,41 @@
 .tours:hover{
     background-color: #0984e3;
     color: white;
+}
+
+.chronoPetit{
+    font-size: 10vh;
+}
+
+
+
+
+@media (orientation: portrait) {
+
+    #chronometreGeneral{
+        font-size: 18vw;
+    }
+
+    .tours {
+        font-size: 5vw;
+        > img {
+            height: 5vw;
+        }
+    }
+
+    .chronometreButton{
+        gap: 15vw;
+        > button {
+            height: 20vw;
+            margin-top: 5vh; 
+            > img {
+                width: 20vw;
+            }
+        }
+    }
+
+    #chronometreSave{
+        margin-top: 5vh;
+    }
+
 }

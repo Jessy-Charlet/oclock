@@ -189,6 +189,7 @@ $(document).ready(function () {
             $("#minuteurH").val("00");
             $("#minuteurM").val("00");
             $("#minuteurS").val("00");
+            reset ();
             return;
         }
         

@@ -28,7 +28,11 @@ $(document).ready(function () {
         heuresC = 0;
         minutesC = 0;
         secondesC = 0;
-        $("#chronometreGeneral").css("font-size", "20vh");
+        if (window.matchMedia("(orientation: portrait)").matches){
+            $("#chronometreGeneral").css("font-size", "18vw")
+        } else {
+            $("#chronometreGeneral").css("font-size", "20vh")
+        }
         $("#chronometreSave").hide();
         $("#chronometreSave").text("");
     })
@@ -51,22 +55,26 @@ $(document).ready(function () {
         secondesC = parseInt(secondesC);
         minutesC = parseInt(minutesC);
         heuresC = parseInt(heuresC);
-
-        if (secondesC < 10) {
-            secondesC = "0" + secondesC;
+        secondesmC = secondesC-1;
+        
+        if (secondesmC < 10) {
+            secondesmC = "0" + secondesmC;
         }
-
+        
         if (minutesC < 10) {
             minutesC = "0" + minutesC;
         }
-
+        
         if (heuresC < 10) {
             heuresC = "0" + heuresC;
         }
-        $("#chronometreSave").show();
-        $("#chronometreGeneral").css("font-size", "10vh");
         tours++;
-        secondesmC = secondesC-1;
+        $("#chronometreSave").show();
+        if (window.matchMedia("(orientation: portrait)").matches){
+            $("#chronometreGeneral").css("font-size", "14vw")
+        } else {
+            $("#chronometreGeneral").css("font-size", "10vh")
+        }
         $("#chronometreSave").prepend(
             "<div class='tours'><img src='./Pictures/tours.png'> Tour " + tours + " - " + heuresC + ":" + minutesC + ":" + secondesmC);
     };

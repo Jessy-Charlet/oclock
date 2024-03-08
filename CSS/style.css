@@ -34,7 +34,7 @@ main{
 /*** Nav **/
 nav{
     box-sizing: border-box;
-    width: 72vh;
+    width: 100vw;
     height: 18vh;
     margin: 0 auto;
     display: flex;
@@ -69,8 +69,30 @@ nav > span > img:hover{
     display:block;
     position:absolute;
     width: 14vh;
-    left: 2vh;
+    left: -20vh;
     bottom: 0;
     transition: all 400ms;
 }
 
+
+
+
+@media (orientation: portrait) {
+
+    nav > span > img{
+        height: 15vw;
+    }
+    nav > span > img:hover{
+        height: 22vw;
+    }
+    #navBarre{
+    width: 15vw;
+    left: 5vw;
+    }
+    .iconActive{
+        height: 22vw;
+    }
+    main{
+        height: 70vh;
+    }
+}

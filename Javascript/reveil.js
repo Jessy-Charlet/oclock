@@ -4,11 +4,16 @@ $(document).ready(function () {
     $("#reveilAjout").on("click", function(){
         reveilAjout();
     });
+   // function Reveil(heure) {
+    //    this.heure = reveilHeureInput;
+
+    //}
 
     /*** Fonction principale */
     function reveilAjout() {
         var reveilHeureInput = document.getElementById("reveilHeure");
         var reveilMessageInput = document.getElementById("reveilMessage");
+        const reveilTR = document.getElementById("reveilTR");
 
         var reveilHeure = reveilHeureInput.value;
         var reveilMessage = reveilMessageInput.value;
@@ -22,15 +27,21 @@ $(document).ready(function () {
             if (timeDiff > 0) {
                 var reveilListeItem = document.createElement("li");
                 reveilListeItem.className = "alarmItem";
-                reveilListeItem.innerHTML = `<div>${reveilHeure}</div><div>${reveilMessage}</div><span>( Dans ${formatTime(timeDiff)} )</span>`;
-
+                reveilListeItem.innerHTML = `<img src="./Pictures/reveil-petit.png"><div>${reveilHeure}</div><div>${reveilMessage}</div>`;
                 document.getElementById("reveilListe").appendChild(reveilListeItem);
+    //            setInterval(function () {
+    //                now = new Date();
+    //                timeDiff = userTime - now;
+    //                $("#reveilTR").html(`Dans ${formatTime(timeDiff)}`);
+   //                 console.log(timeDiff);
+    //            }, 1000)
 
                 setTimeout(function () {
                     alert(reveilMessage);
                     reveilListeItem.classList.add("passee");
                     document.getElementById("countdown").innerHTML = "Passée";
                 }, timeDiff);
+                alert(`Le réveil se déclenchera dans ${formatTime(timeDiff)}`);
             } else {
                 alert("L'heure du réveil est déjà passée.");
             }
@@ -41,6 +52,11 @@ $(document).ready(function () {
         } else {
             alert("Veuillez entrer une heure et un message pour le réveil.");
         }
+    }
+    
+    function formatTimeMAJ(formatTime, timeDiff) {
+        timeDiff = timeDiff - 1000;
+        setInterval(formatTime, 1000)
     }
 
     function formatTime(milliseconds) {

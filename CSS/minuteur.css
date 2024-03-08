@@ -65,3 +65,66 @@ input:focus {
     color: white;
     text-align: center;
 }
+
+
+
+
+@media (orientation: portrait) {
+
+    .minuteurButton{
+        gap: 15vw;
+        > button {
+            height: 20vw;
+            margin-top: 10vh; 
+            > img {
+                width: 20vw;
+            }
+        }
+    }
+
+    .minuteurGrid {
+        column-gap: 0;
+        row-gap: 2vh;
+        width: fit-content;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+    
+        >button {
+            font-size: 5vh;
+            text-align: center;
+            background-color: #1b1b1b;
+            border: none;
+            color: #e84393;
+        }
+        >button:hover{
+            color: white;
+        }
+    
+        >input {
+            font-size:15vw;
+            text-align: center;
+            width: 1.7em;
+            background-color: #1b1b1b;
+            border: none;
+            color: white;
+            margin: 0 auto;
+        }
+    
+        > div {
+            text-align: center;
+            color:#e84393;
+            letter-spacing: 0.5em;
+            font-size: 0.9em;
+            margin: 0;
+            padding: 0;
+            text-transform: uppercase;
+            text-align: center;
+        }
+    
+    }
+    #minuteurFinal{
+        font-size: 18vw;
+    }
+
+}
