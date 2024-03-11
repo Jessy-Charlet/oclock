@@ -8,6 +8,7 @@
 body{
     background-color: #1b1b1b;
     height: 100vh;
+    position: relative;
 }
 
 
@@ -74,11 +75,27 @@ nav > span > img:hover{
     transition: all 400ms;
 }
 
+footer{
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    border-radius: 10px 10px 0 0;
+    background-color: #0c0c0c;
+    color: #313131;
+    translate: 50%;
+    width: fit-content;
+    text-align: center;
+    padding: 0.5em 1em;
+}
+
 
 
 
 @media (orientation: portrait) {
 
+    body {
+        height: 100svh;
+      }
     nav > span > img{
         height: 15vw;
     }
@@ -94,5 +111,9 @@ nav > span > img:hover{
     }
     main{
         height: 70vh;
+    }
+    footer{
+        font-size: 0.9em;
+        width: 80%;
     }
 }
